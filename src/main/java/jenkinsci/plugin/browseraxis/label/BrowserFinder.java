@@ -13,6 +13,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import jenkinsci.plugin.browseraxis.Browser;
@@ -25,7 +26,7 @@ import jenkinsci.plugin.browseraxis.Browser;
 @Extension
 public class BrowserFinder extends LabelFinder {
 
-    private Map<String, Long> nodeActualization = new TreeMap<String, Long>();
+    private Map<String, Long> nodeActualization = new ConcurrentHashMap<String, Long>();
 
     public BrowserFinder() {
     }
